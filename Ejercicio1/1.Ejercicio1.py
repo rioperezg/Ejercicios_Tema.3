@@ -12,9 +12,10 @@ aguja2 = Pila()
 aguja3 = Pila()
 # Hacemos un bucle para que la aguja 1 tenga 74 datos apilados
 n = 74
-for dato in range(n):
-    Pila.apilar(aguja1, dato)
+for i in range(n):
+    Pila.apilar(aguja1, "Disco{}".format(i))
 
 print(Pila.pila_vacia(aguja1))
-print(Pila.en_cima(aguja1))
+print(Pila.barrido(aguja1))
 print(Pila.Tamaño(aguja1))
+
