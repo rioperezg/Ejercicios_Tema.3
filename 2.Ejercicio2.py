@@ -6,7 +6,7 @@ iterativa
 # Primero de forma iterativa
 def Iter_sarrus(matrix):
 # primera multiplicaicon diagonal
-    for i, pos in matrix:
+    for i, pos in enumerate(matrix):
         if i == 1:
             suma1 = pos[1]*pos[5]*pos[9]
 # segunda multiplicacion
