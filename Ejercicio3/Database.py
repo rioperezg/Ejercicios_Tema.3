@@ -64,4 +64,9 @@ class Naves:
                 writer.writerow((nave.Nombre, nave.Largo, nave.Tripulacion, nave.Pasajeros))   
     @staticmethod
     def Mostrar(Nombre, Largo, Tripulacion, Pasajeros):
-
+        for nave in Naves.lista:
+            if nave.Nombre == Nombre:
+                return f"({Nombre} {Largo} {Tripulacion} {Pasajeros})"
+    @staticmethod
+    def Tripulantes(Pasajeros):
+        for nave in Naves.lista:
