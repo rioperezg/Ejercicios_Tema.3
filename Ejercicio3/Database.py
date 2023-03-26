@@ -62,4 +62,6 @@ class Naves:
             writer = csv.writer(fichero, delimiter=';')
             for nave in Naves.lista:
                 writer.writerow((nave.Nombre, nave.Largo, nave.Tripulacion, nave.Pasajeros))   
-                                  
+    @staticmethod
+    def Mostrar(Nombre, Largo, Tripulacion, Pasajeros):
+
