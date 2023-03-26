@@ -38,4 +38,12 @@ class Naves:
         nave = Nave(Nombre, Largo, Tripulacion, Pasajeros)
         Naves.lista.append(nave)
         Naves.guardar()
-        return nave                     
+        return nave
+    @staticmethod
+    def modificar(Nombre, Largo, Tripulacion, Pasajeros):
+        for indice, nave in enumerate(Naves.lista):
+            if nave.Nombre == Nombre:
+                Naves.lista[indice].Nombre = Nombre
+                Naves.lista[indice].Largo = Largo
+                Naves.guardar()
+                return Naves.lista[indice]                     
