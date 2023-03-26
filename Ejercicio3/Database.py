@@ -45,5 +45,21 @@ class Naves:
             if nave.Nombre == Nombre:
                 Naves.lista[indice].Nombre = Nombre
                 Naves.lista[indice].Largo = Largo
+                Naves.lista[indice].Tripulacion = Tripulacion
+                Naves.lista[indice].Pasajeros = Pasajeros
                 Naves.guardar()
-                return Naves.lista[indice]                     
+                return Naves.lista[indice]
+    @staticmethod
+    def borrar(Nombre):
+        for indice, nave in enumerate(Naves.lista):
+            if nave.Nombre == Nombre:
+                nave = Naves.lista.pop(indice)
+                Naves.guardar()
+                return nave
+    @staticmethod
+    def guardar():
+        with open(Config.DATABASE_PATH, 'w', newline='\n') as fichero:
+            writer = csv.writer(fichero, delimiter=';')
+            for nave in Naves.lista:
+                writer.writerow((nave.Nombre, nave.Largo, nave.Tripulacion, nave.Pasajeros))   
+                                  
