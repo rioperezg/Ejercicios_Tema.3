@@ -32,11 +32,14 @@ matriz = [[1, 3, 4],[-1, -5, 4],[9, 0, -2]]
 # Como podemos hacer para crear una funcion que se llame asi misma constantemente para calcular el det de una matriz 3x3 mediante 
 # sarrus, Lo haremos con condicionales: 
 def recur_Sarrus(matrix):
-    if matrix == [[1,0,0],[0,1,0],[0,0,1]]:
-        return 1
-    else:
-        pass
-I = [[1,0,0],
+    for indice, i in matrix:
+        if i == 2:
+            return indice
+        else:
+            pass    
+  
+        
+I = [[1,2,0],
      [0,1,0],
      [0,0,1]]
 print(recur_Sarrus(I))
