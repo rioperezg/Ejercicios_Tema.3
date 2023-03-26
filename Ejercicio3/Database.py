@@ -18,6 +18,18 @@ class Nave:
         self.Largo = Largo
         self.Tripulacion = Tripulacion
         self.Pasajeros = Pasajeros
+    def __str__(self):
+        return f"({self.Nombre} {self.Largo} {self.Tripulacion} {self.Pasajeros})"
 
 class Naves:
-            
+    lista = []
+    with open(Config.DATABASE_PATH, newline='\n') as fichero:
+        reader = csv.reader(fichero, delimiter=';')
+        for Nombre, Largo, Tripulacion, Pasajeros in reader:
+            nave =Nave(Nombre, Largo, Tripulacion, Pasajeros)
+            lista.append(nave) 
+    @staticmethod
+    def buscar(Nombre):
+        for nave in Naves.lista:
+            if nave.Nombre == Nombre:
+                return nave               
