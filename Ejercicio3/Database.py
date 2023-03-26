@@ -11,3 +11,13 @@ mostrar todas las naves que comienzan con AT;
 listar todas las naves que pueden llevar seis o más pasajeros;
  mostrar toda la información de la nave más pequeña y la más grande
 """
+import csv, Config
+class Nave:
+    def __init__(self, Nombre, Largo, Tripulacion, Pasajeros):
+        self.Nombre = Nombre
+        self.Largo = Largo
+        self.Tripulacion = Tripulacion
+        self.Pasajeros = Pasajeros
+
+class Naves:
+            
