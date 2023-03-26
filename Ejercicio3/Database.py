@@ -32,4 +32,10 @@ class Naves:
     def buscar(Nombre):
         for nave in Naves.lista:
             if nave.Nombre == Nombre:
-                return nave               
+                return nave  
+    @staticmethod
+    def crear(Nombre, Largo, Tripulacion, Pasajeros):
+        nave = Nave(Nombre, Largo, Tripulacion, Pasajeros)
+        Naves.lista.append(nave)
+        Naves.guardar()
+        return nave                     
