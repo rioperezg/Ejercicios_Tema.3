@@ -68,5 +68,22 @@ class Naves:
             if nave.Nombre == Nombre:
                 return f"({Nombre} {Largo} {Tripulacion} {Pasajeros})"
     @staticmethod
-    def Tripulantes(Pasajeros):
+    def Tripulantes():
+        Nave_mas_trip = []
         for nave in Naves.lista:
+            # Para hacer esta funcion se me ocurre crear una nueva lista e ir borrando el elemento si el numero de pasajeros es menor
+            # al siguiente
+            Nave_mas_trip.append(nave)
+            if nave.Pasajeros < (nave + 1).Pasajeros:
+                Nave_mas_trip.pop(nave)
+            else:
+                Nave_mas_trip.pop(nave + 1)
+        return Nave_mas_trip
+    def Naves_conAT(Nombre):
+        for nave in Naves.lista:
+            nave.Nombre = str(Nombre)
+            for Nombre in Nombre:
+                if Nombre[0] == "A" and Nombre[1] == "T":
+                    return nave
+                else:
+                    pass 
