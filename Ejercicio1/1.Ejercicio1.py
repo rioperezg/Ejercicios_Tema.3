@@ -7,7 +7,11 @@ hubieran terminado de mover los discos, llegaría el fin del mundo. Resolver est
 """
 from pila import Pila
 # Creamos tres pilas que corresponden a las tres agujas
-
+aguja1 = Pila()
+aguja2 = Pila()
+aguja3 = Pila()
+def hanoi(n):
+    
 
 
 
