@@ -56,3 +56,14 @@ def recur_Sarrus(matrix):
 
 
 # print(recur_Sarrus(I))
+
+def Iter_sarrus(matrix):
+    # primera multiplicaicon diagonal
+    for indice, i in enumerate(matrix):
+        for indice1, j in enumerate(matrix):
+            if indice == 1 and indice1 == 1:
+                suma1 = matrix[1][1]*matrix[5][5]*matrix[9][9]
+
+    suma = suma1 + suma2 + suma3
+    resta = resta1 + resta2 + resta3
+    return suma - resta

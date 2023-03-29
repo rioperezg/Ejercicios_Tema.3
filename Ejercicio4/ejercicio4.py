@@ -1,7 +1,12 @@
+"""
+Implementar sobre el TDA polinomio desarrollado previamente las siguientes actividades:
+
+ restar;
+ dividir;
+ eliminar un término;
+ determinar si un término existe en un polinomio.
+"""
 from Nodo import Nodo
-from Polinomio import Obtener_valor 
-from Polinomio import modificar_termino
-from Polinomio import agregar_termino
 class datoPolinomio(object):
     def __init__(self, valor, termino):
         self.valor = valor
@@ -56,11 +61,11 @@ class Polinomio(object):
             while(pol2 is not None):
                 termino = pol1.info.termino + pol2.info.termino
                 valor = pol1.info.valor * pol2.info.valor
-                if(Obtener_valor(paux, termino)!= 0):
-                    valor += Obtener_valor(paux, termino)
-                    modificar_termino(paux, termino, valor)
+                if(Polinomio.Obtener_valor(paux, termino)!= 0):
+                    valor += Polinomio.Obtener_valor(paux, termino)
+                    Polinomio.modificar_termino(paux, termino, valor)
                 else:
-                    agregar_termino(paux, termino, valor)
+                    Polinomio.agregar_termino(paux, termino, valor)
                 pol2 = pol2.sig
                 pol1 = pol1.sig 
         return paux   
@@ -76,12 +81,8 @@ class Polinomio(object):
         else:
             print("No hay polinomio con este grado")
             
-            
 
-
-""""
-Ahora quedará a cargo del alumno completar la funcionalidad del TDA polinomio, dado que solo se desarrollaron algunas funciones, 
-agregándole la capacidad de eliminar términos, y de determinar si en un polinomio existe un término, para evitar tener que llamar a 
-la función “obtener_valor” y luego consultar si el resultado es distinto de cero para determinar si el polinomio tiene ese término o no.
- Esta última debe ser una función booleana.      
-"""
+polinomio1 = "x^2 + 2x^1 + 3"	
+termino1 = "x"
+valor1 = 2
+print(Polinomio.agregar_termino(polinomio1,termino1,valor1)) 
