@@ -10,8 +10,17 @@ from pila import Pila
 aguja1 = Pila()
 aguja2 = Pila()
 aguja3 = Pila()
+# intentemos hacerlo de forma recursiva: si n = 0 return se han apilado los discos y si no es = 0 llamamos recursivamente a la funcion
+# def hanoi(n-1) y vamos apilando el disco 
 def hanoi(n):
-    
+    Dato = "Disco{}".format(n)
+    if n == 0:
+        print("Se han apilado los discos")
+        return Pila.barrido(aguja1)
+    else:
+        Pila.apilar(aguja1, Dato)
+        return hanoi(n-1)
+print(hanoi(74))
 
 
 

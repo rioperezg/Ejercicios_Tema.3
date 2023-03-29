@@ -28,8 +28,8 @@ class Pila(object):
         paux = Pila()
         while(not Pila.pila_vacia(pila)):
             dato = Pila.desapilar(pila)
-            print(dato)
             Pila.apilar(paux, dato)
         while(not Pila.pila_vacia(paux)):
             dato = Pila.desapilar(paux)
             Pila.apilar(pila, dato)
+            print(dato)
