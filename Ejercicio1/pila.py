@@ -11,9 +11,12 @@ class Pila(object):
         nodo.sig = pila.cima
         pila.tamaño += 1
     def desapilar(pila):
-        x = nodoPila()
-        x.info = pila.cima
-        pila.cima = pila.cima.sig
+        nodo = nodoPila()
+        x = nodo.info
+        nodo.sig = pila.cima
+        # Mpdificada la funcion despailar: E aqui abajo la anterior
+        # x = pila.cima.info
+        # pila.cima = pila.cima.sig
         pila.tamaño -= 1
         return x
     def pila_vacia(pila):
@@ -27,10 +30,10 @@ class Pila(object):
         return pila.tamaño
     def barrido(pila):
         paux = Pila()
-        while(Pila.pila_vacia(pila) == None):
+        while(Pila.pila_vacia(pila) != None):
             dato = Pila.desapilar(pila)
             print(dato)
             Pila.apilar(paux, dato)
-        while(Pila.pila_vacia(paux) == None):
+        while(Pila.pila_vacia(paux) != None):
             dato = Pila.desapilar(paux)
             Pila.apilar(pila, dato)
