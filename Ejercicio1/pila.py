@@ -37,3 +37,4 @@ class Pila(object):
         while(Pila.pila_vacia(paux) != None):
             dato = Pila.desapilar(paux)
             Pila.apilar(pila, dato)
+            
