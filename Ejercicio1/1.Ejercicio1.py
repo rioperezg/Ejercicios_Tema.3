@@ -13,7 +13,8 @@ aguja3 = Pila()
 # intentemos hacerlo de forma recursiva: si n = 0 return se han apilado los discos y si no es = 0 llamamos recursivamente a la funcion
 # def hanoi(n-1) y vamos apilando el disco
 for i in range(74): 
-    Pila.apilar(aguja1, i)
+    dato = i
+    Pila.apilar(aguja1, dato)
 Pila.barrido(aguja1)
 
 def hanoi(n, origen, destino, auxiliar):
