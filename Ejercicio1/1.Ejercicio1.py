@@ -28,7 +28,7 @@ def hanoi(n, origen, destino, auxiliar):
         # 3. Mover n-1 discos de auxiliar a destino, usando origen como apoyo
         hanoi(n-1, auxiliar, destino, origen)
 
-print(hanoi(74))
+print(hanoi(74, aguja1, aguja2, aguja3))
 
 
 
